@@ -1,5 +1,6 @@
 # Python Pingsms API Package
  This is a python package for https://pingsms.in API. If you are looking for API usage in PHP [click here!](https://github.com/sa1if3/Quickstart-guide-on-sending-SMS-using-API)
+ 
  ## Installation
  The package is located at [PyPI](https://pypi.org/project/pingsms-api/) and can be installed with a ```pip``` command. To install the package simply run :-
  ```
@@ -43,14 +44,68 @@
  9. **message :** Authorised message format against the Template number.<br/>This parameter is only used in the method ```send_single_sms()``` and ```send_multiple_sms(custom_data)```
  ### Methods
  There are total of 5 available methods:
- 1. **get_sms_balance(custom_data) :** <br/>Get Transactional and Promotional Balance of The User.<br/>Input Parameter's Required:key <br/>Output: JSON
+ 1. **get_sms_balance(custom_data) :** <br/>Get Transactional and Promotional Balance of The User.<br/>Input Parameter's Required:key <br/>Output: JSON 
  2. **get_sender_id(custom_data) :** <br/>Get List of Sender Ids of The User. <br/>Input Parameter's Required:key <br/> Output: JSON
  3. **get_job_report(custom_data) :** <br/>Get Job Report of the User. <br/>Input Parameter's Required:key,job_id,report_date<br/>Output: JSON
  4. **get_sent_sms_reports(custom_data) :** <br/>Get SMS sent reports of the User. <br/>Input Parameter's Required:key,report_date,product <br/>Output: JSON
  5. **send_single_sms(custom_data) :** <br/>Send Single SMS. <br/>Input Parameter's Required:key,sender,mobile,language,product,message, template<br/>Output: JSON
  6. **send_multiple_sms(custom_data) :** <br/>Send Multiple SMS. <br/>Input Parameter's Required:key,sender,mobile(multiple and comma separated),language,product,message,template<br/>Output: JSON
+ ### Examples
+  ```python
+ """
+ Example 1
+ """
+ import pingsms
+ custom_data = {
+  "key": "AMjdkshmsaZdoV6PGWoSbejmEgFZ905EdmaanahwqkwNVc ",
+}
+pingsms.get_sms_balance(custom_data)
+
+ ```
+ 
+  ```python
+ """
+ Example 2
+ """
+ import pingsms
+ custom_data = {
+  "key": "AMjdkshmsaZdoV6PGWoSbejmEgFZ905EdmaanahwqkwNVc ",
+  "product":"1",
+  "language":"1",
+  "sender":"PNGSMS",
+  "mobile":"1232123451",
+  "template":"282222382902",
+  "message":"Hello World!"
+}
+pingsms.send_multiple_sms(custom_data)
+ ```
  ### Output
 All outputs are returned in the form of JSON.
+```json
+"""
+Example 1 Output
+"""
+{
+    "code": 201,
+    "status": "Success",
+    "message": "User balance details found",
+    "available_balance": {
+        "transactional_balance": 9248,
+        "promotional_balance": 1029
+    }
+}
+```
+```json
+"""
+Example 2 Output
+"""
+{
+    "code": 201,
+    "status": "Success",
+    "message": "Message Sent",
+    "job_id": "11312351841231313"
+}
+```
 ## Error Codes
 | Error Code   | Meaning                                                                                                                                                                                                                    |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -72,3 +127,9 @@ All outputs are returned in the form of JSON.
 | 151          | This error occurs when Job Id and date doesn't match or the Job Id is incorrect.                                                                                                                                           |
 | 142          | Unauthorized IP Address. This error appears when the IP of the server which sent the GET request didn't match the whitelisted IP list.                                                                                     |
 | 500          | This error occurs usually when the  problem is on our end. Kindly, notify us immediately when you face this  issue.                                                                                                        |
+
+# GET https://pingsms.in API KEY
+         -Sign Up in https://pingsms.in
+         -Get API Key from Developer API Tab
+         
+  ![API_KEY](https://github.com/sa1if3/auto-sms-wisher/blob/master/api-key.png)
