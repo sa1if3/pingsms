@@ -14,7 +14,7 @@ setup(
     description="Interact with PingSMS API",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/realpython/reader",
+    url="https://github.com/sa1if3/pingsms",
     author="Md. Saifur Rahman",
     author_email="saif@techflow360.com",
     license="MIT",
