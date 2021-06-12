@@ -31,8 +31,8 @@
   "message":"Hello World!"
 }
  ```
- There are total 9 elements(known as key:value pairs) allowed in the dictionary. Any additional parameters are ignored.
- 1. **key :** 
+ There are total 9 elements (known as key:value pairs) allowed in the dictionary. Any additional parameters are ignored.
+ 1. **key :** A user is identified by a unique hashed key. This key can be generated from the https://pingsms.in user panel. All pingsms customers have free access to API keys. This is an mandatory field required by all the methods.
  2. **job_id :**
  3. **report_date :**
  4. **product :**
@@ -44,3 +44,25 @@
  ### Methods
  There are 5
  ### Output
+All outputs are returned in the form of JSON.
+## Error Codes
+| Error Code   | Meaning                                                                                                                                                                                                                    |
+|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Unauthorized | Incorrect API key or the account is blocked.                                                                                                                                                                               |
+| 1            | This error occurs when no recepients found.                                                                                                                                                                                |
+| 2            | This error occurs when no sender name specied.                                                                                                                                                                             |
+| 3            | Invalid Sender Id for this domain. This error appears if you use an  Sender Id non specified for your account.                                                                                                             |
+| 4            | This error occurs when Language id  is missing or not specified. Choose between two language formats                                      1 - English                                      2 - Unicode (Regional Language) |
+| 5            | This error occurs when Product id is  missing or not specified. Choose between two Product types                                      1 - Transactional                                      2 - Promotional               |
+| 6            | This error occurs when no Message  Content is found. This error occurs when message content is missing.                                                                                                                    |
+| 11           | This error occurs when Message size  exceeds the given limit. Please check your account balance and message  size.                                                                                                         |
+| 12           | Mobile numbers should not more than  500. This error occurs when the number of mobile number in multiple sms  exceeds 500.                                                                                                 |
+| 15           | This error occurs when Job Id is missing.                                                                                                                                                                                  |
+| 17           | This error occurs when Date is missing.                                                                                                                                                                                    |
+| 18           | This error occurs when Date format is invalid. Date should be in YYYY-MM-DD format.                                                                                                                                        |
+| 101          | This error occurs when when the  account has Insufficient Balance. Recharge your account to fix this  issue.                                                                                                               |
+| 102          | This error occurs when API Key is not specified.                                                                                                                                                                           |
+| 143          | This error occurs when User not found or Inactive.                                                                                                                                                                         |
+| 151          | This error occurs when Job Id and date doesn't match or the Job Id is incorrect.                                                                                                                                           |
+| 142          | Unauthorized IP Address. This error appears when the IP of the server which sent the GET request didn't match the whitelisted IP list.                                                                                     |
+| 500          | This error occurs usually when the  problem is on our end. Kindly, notify us immediately when you face this  issue.                                                                                                        |
