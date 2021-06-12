@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text()
 
 # This call to setup() does all the work
 setup(
-    name="pingsms",
+    name="pingsms-api",
     version="1.0.0",
     description="Interact with PingSMS API",
     long_description=README,
