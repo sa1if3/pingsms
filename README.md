@@ -1,6 +1,15 @@
 # Python Pingsms API Package
  This is a python package for https://pingsms.in API. If you are looking for API usage in PHP [click here!](https://github.com/sa1if3/Quickstart-guide-on-sending-SMS-using-API)
- 
+ ## Contents
+ 1. [Installation](#installation)
+ 2. [Usage](#usage)
+     1. [Importing the package](#importing-the-package)
+     2. [Input](#input)
+     3. [Methods](#methods)
+     4. [Examples](#examples)
+     5. [Output](#output)
+ 3. [Error Codes](#error-codes)
+ 4. [Get Api Key](#get-api-key)
  ## Installation
  The package is located at [PyPI](https://pypi.org/project/pingsms-api/) and can be installed with a ```pip``` command. To install the package simply run :-
  ```
@@ -32,7 +41,7 @@
   "message":"Hello World!"
 }
  ```
- [here](#installation)
+ 
  There are total 9 elements (known as key:value pairs) allowed in the dictionary. Any additional parameters are ignored.
  1. **key :** A user is identified by a unique hashed key. This key can be generated from the https://pingsms.in user panel. All pingsms customers have free access to API keys. This is an mandatory field required by all the methods.
  2. **job_id :** The Job Id number. This parameter is only used in the method ```get_job_report()```
@@ -129,7 +138,7 @@ Example 2 Output
 | 142          | Unauthorized IP Address. This error appears when the IP of the server which sent the GET request didn't match the whitelisted IP list.                                                                                     |
 | 500          | This error occurs usually when the  problem is on our end. Kindly, notify us immediately when you face this  issue.                                                                                                        |
 
-# GET https://pingsms.in API KEY
+# Get API Key
          -Sign Up in https://pingsms.in
          -Get API Key from Developer API Tab
          
