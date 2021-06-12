@@ -42,7 +42,13 @@
  8. **template :** Authorised Template number of the user.<br/>This parameter is only used in the method ```send_single_sms()``` and ```send_multiple_sms(custom_data)```
  9. **message :** Authorised message format against the Template number.<br/>This parameter is only used in the method ```send_single_sms()``` and ```send_multiple_sms(custom_data)```
  ### Methods
- There are 5
+ There are total of 5 available methods:
+ 1. **get_sms_balance(custom_data) :** <br/>Get Transactional and Promotional Balance of The User.<br/>Input Parameter's Required:key <br/>Output: JSON
+ 2. **get_sender_id(custom_data) :** <br/>Get List of Sender Ids of The User. <br/>Input Parameter's Required:key <br/> Output: JSON
+ 3. **get_job_report(custom_data) :** <br/>Get Job Report of the User. <br/>Input Parameter's Required:key,job_id,report_date<br/>Output: JSON
+ 4. **get_sent_sms_reports(custom_data) :** <br/>Get SMS sent reports of the User. <br/>Input Parameter's Required:key,report_date,product <br/>Output: JSON
+ 5. **send_single_sms(custom_data) :** <br/>Send Single SMS. <br/>Input Parameter's Required:key,sender,mobile,language,product,message, template<br/>Output: JSON
+ 6. **send_multiple_sms(custom_data) :** <br/>Send Multiple SMS. <br/>Input Parameter's Required:key,sender,mobile(multiple and comma separated),language,product,message,template<br/>Output: JSON
  ### Output
 All outputs are returned in the form of JSON.
 ## Error Codes
