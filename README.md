@@ -33,14 +33,14 @@
  ```
  There are total 9 elements (known as key:value pairs) allowed in the dictionary. Any additional parameters are ignored.
  1. **key :** A user is identified by a unique hashed key. This key can be generated from the https://pingsms.in user panel. All pingsms customers have free access to API keys. This is an mandatory field required by all the methods.
- 2. **job_id :**
- 3. **report_date :**
- 4. **product :**
- 5. **language :**
- 6. **sender :**
- 7. **mobile :**
- 8. **template :**
- 9. **message :** 
+ 2. **job_id :** The Job Id number. This parameter is only used in the method ```get_job_report()```
+ 3. **report_date :** Date Of Report in YYYY-MM-DD Format.This parameter is used in the method ```get_job_report()``` and ```get_sent_sms_reports()```
+ 4. **product :** Choose between two product types <br/>1 - Transactional<br/>2 - Promotional <br/>This parameter is only used in the method ```send_single_sms()``` and ```send_multiple_sms(custom_data)```
+ 5. **language :** Choose between two language formats <br/>1 - English<br/>2 - Unicode (Regional Language) <br/>This parameter is only used in the method ```send_single_sms()``` and ```send_multiple_sms(custom_data)```
+ 6. **sender :**  	User's approved 6 characters Sender Id.<br/>This parameter is only used in the method ```send_single_sms()``` and ```send_multiple_sms(custom_data)```
+ 7. **mobile :**  	10 digit recipient mobile number. (In case of multiple sms mobile numbers should be provide in comma(,) separated form).<br/>This parameter is only used in the method ```send_single_sms()``` and ```send_multiple_sms(custom_data)```
+ 8. **template :** Authorised Template number of the user.<br/>This parameter is only used in the method ```send_single_sms()``` and ```send_multiple_sms(custom_data)```
+ 9. **message :** Authorised message format against the Template number.<br/>This parameter is only used in the method ```send_single_sms()``` and ```send_multiple_sms(custom_data)```
  ### Methods
  There are 5
  ### Output
