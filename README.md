@@ -32,6 +32,7 @@
   "message":"Hello World!"
 }
  ```
+ [here](#installation)
  There are total 9 elements (known as key:value pairs) allowed in the dictionary. Any additional parameters are ignored.
  1. **key :** A user is identified by a unique hashed key. This key can be generated from the https://pingsms.in user panel. All pingsms customers have free access to API keys. This is an mandatory field required by all the methods.
  2. **job_id :** The Job Id number. This parameter is only used in the method ```get_job_report()```
