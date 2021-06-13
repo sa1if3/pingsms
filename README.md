@@ -11,14 +11,14 @@
  3. [Error Codes](#error-codes)
  4. [Get Api Key](#get-api-key)
  ## Installation
- The package is located at [PyPI](https://pypi.org/project/pingsms-api/) and can be installed with a ```pip``` command. To install the package simply run :-
+ The package is located at [PyPI](https://pypi.org/project/pingsms-api/) and can be installed with a ```pip``` command. To install the package simply run:-
  ```
  pip install pingsms-api 
  ```
  ## Usage
  ### Importing the package
  To start using the package first we need to import the package.<br/>
- **Note: Our package name is ```pingsms-api``` but from now we will be using ```pingsms``` only for all our tasks.** <br/>
+ **Note: Our package name is ```pingsms-api``` but from now on we will be using ```pingsms``` only for all our tasks.** <br/>
  To import the package run the following command:-
  ```
  import pingsms
@@ -42,7 +42,7 @@
 }
  ```
  
- There are total 9 elements (known as key:value pairs) allowed in the dictionary. Any additional parameters are ignored.
+ There is a total of 9 elements (known as key:value pairs) allowed in the dictionary. Any additional parameters are ignored.
  1. **key :** A user is identified by a unique hashed key. This key can be generated from the https://pingsms.in user panel. All pingsms customers have free access to API keys. This is an mandatory field required by all the methods.
  2. **job_id :** The Job Id number. This parameter is only used in the method ```get_job_report()```
  3. **report_date :** Date Of Report in YYYY-MM-DD Format.This parameter is used in the method ```get_job_report()``` and ```get_sent_sms_reports()```
@@ -120,26 +120,26 @@ Example 2 Output
 | Error Code   | Meaning                                                                                                                                                                                                                    |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unauthorized | Incorrect API key or the account is blocked.                                                                                                                                                                               |
-| 1            | This error occurs when no recepients found.                                                                                                                                                                                |
-| 2            | This error occurs when no sender name specied.                                                                                                                                                                             |
-| 3            | Invalid Sender Id for this domain. This error appears if you use an  Sender Id non specified for your account.                                                                                                             |
-| 4            | This error occurs when Language id  is missing or not specified. Choose between two language formats                                      1 - English                                      2 - Unicode (Regional Language) |
-| 5            | This error occurs when Product id is  missing or not specified. Choose between two Product types                                      1 - Transactional                                      2 - Promotional               |
+| 1            | This error occurs when no recipients is found.                                                                                                                                                                                |
+| 2            | This error occurs when no sender name is specified.                                                                                                                                                                             |
+| 3            | Invalid Sender Id for this domain. This error appears if you use a Sender Id which is not specified for your account.                                                                                                             |
+| 4            | This error occurs when the Language id is missing or not specified. Choose between two language formats                                      1 - English                                      2 - Unicode (Regional Language) |
+| 5            | This error occurs when the Product id is missing or not specified. Choose between two Product types                                      1 - Transactional                                      2 - Promotional               |
 | 6            | This error occurs when no Message  Content is found. This error occurs when message content is missing.                                                                                                                    |
-| 11           | This error occurs when Message size  exceeds the given limit. Please check your account balance and message  size.                                                                                                         |
-| 12           | Mobile numbers should not more than  500. This error occurs when the number of mobile number in multiple sms  exceeds 500.                                                                                                 |
+| 11           | This error occurs when the Message size exceeds the given limit. Please check your account balance and message size.                                                                                                         |
+| 12           | Mobile numbers should not be more than 500. This error occurs when the number of mobile number in multiple SMS  exceeds 500.                                                                                                 |
 | 15           | This error occurs when Job Id is missing.                                                                                                                                                                                  |
-| 17           | This error occurs when Date is missing.                                                                                                                                                                                    |
-| 18           | This error occurs when Date format is invalid. Date should be in YYYY-MM-DD format.                                                                                                                                        |
-| 101          | This error occurs when when the  account has Insufficient Balance. Recharge your account to fix this  issue.                                                                                                               |
+| 17           | This error occurs when the Date is missing.                                                                                                                                                                                    |
+| 18           | This error occurs when the Date format is invalid. The date should be in ```YYYY-MM-DD``` format.                                                                                                                                        |
+| 101          | This error occurs when the account has Insufficient Balance. Recharge your account to fix this issue.                                                                                                               |
 | 102          | This error occurs when API Key is not specified.                                                                                                                                                                           |
-| 143          | This error occurs when User not found or Inactive.                                                                                                                                                                         |
+| 143          | This error occurs when the User not found or Inactive.                                                                                                                                                                         |
 | 151          | This error occurs when Job Id and date doesn't match or the Job Id is incorrect.                                                                                                                                           |
 | 142          | Unauthorized IP Address. This error appears when the IP of the server which sent the GET request didn't match the whitelisted IP list.                                                                                     |
-| 500          | This error occurs usually when the  problem is on our end. Kindly, notify us immediately when you face this  issue.                                                                                                        |
+| 500          | This error occurs usually when the problem is on our end. Kindly, notify us immediately when you face this issue.                                                                                                        |
 
 # Get API Key
-         -Sign Up in https://pingsms.in
+         -Sign Up at https://pingsms.in
          -Get API Key from Developer API Tab
          
   ![API_KEY](https://github.com/sa1if3/auto-sms-wisher/blob/master/api-key.png)
